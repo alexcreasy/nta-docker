@@ -8,7 +8,7 @@ RUN yum clean all
 
 RUN cd /opt
 
-RUN curl http://download.jboss.org/wildfly/8.0.0.Final/wildfly-8.0.0.Final.tar.gz | tar zx
+RUN curl http://download.jboss.org/wildfly/8.0.0.Final/wildfly-8.0.0.Final.tar.gz | tar xz
 
 # Create the wildfly user and group
 RUN groupadd -r wildfly -g 433 && useradd -u 431 -r -g wildfly -d /opt/wildfly-8.0.0.Final -s /sbin/nologin -c "WildFly user" wildfly
